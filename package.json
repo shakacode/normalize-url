@@ -13,10 +13,12 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava",
-    "transpile": "babel index.js --out-file index.es5.js"
+    "test": "xo && ava"
   },
   "main": "index.es5.js",
+  "files": [
+    "index.js"
+  ],
   "keywords": [
     "normalize",
     "url",
@@ -34,15 +36,17 @@
     "canonical"
   ],
   "dependencies": {
+    "babel-loader": "^7.1.2",
     "prepend-http": "^2.0.0",
     "query-string": "^5.0.1",
     "sort-keys": "^2.0.0"
   },
   "devDependencies": {
     "ava": "*",
-    "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
+    "webpack": "^3.11.0",
     "xo": "*"
   }
 }
