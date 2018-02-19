@@ -6,7 +6,9 @@ module.exports = {
 	devtool: false,
 	output: {
 		path: __dirname,
-		filename: "index.es5.js"
+		filename: "index.es5.js",
+		library: "normalizeUrl",
+		libraryTarget: "umd"
 	},
 	resolve: {
 		extensions: [".js"]
